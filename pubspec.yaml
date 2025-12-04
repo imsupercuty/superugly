@@ -1,0 +1,72 @@
+name: superugly
+description: "A new Flutter project."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none'
+
+# The following defines the version and build number for your application.
+version: 1.0.0+1
+
+environment:
+  # Dart SDK 버전을 유연하게 설정하여 충돌 가능성을 줄입니다.
+  sdk: ">=3.0.0 <4.0.0"
+
+# Dependencies specify other packages that your package needs in order to work.
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # ✅ 앱 종료 후에도 데이터(분사 기록, 다이어리)를 저장하고 불러오기 위해 사용
+  shared_preferences: ^2.2.2
+
+  # 지역화 기능 추가
+  flutter_localizations:
+    sdk: flutter
+
+  # 🛠️ 수정: intl 버전을 유연하게 설정하거나, pubspec.lock에서 결정하도록 명시적 버전을 제거합니다.
+  # intl: ^0.20.2  <-- 이 줄은 제거하여 flutter_localizations가 적절한 버전을 찾도록 합니다.
+
+  # 만약 intl이 여전히 필요하다면:
+  intl: ^0.20.2  # 현재 안정적인 최신 intl 버전을 사용하는 것이 더 좋습니다.
+
+  google_generative_ai: ^0.4.7
+  http: ^1.2.1  # 🛠️ 수정: 최신 안정 버전으로 캐럿 구문을 조정했습니다.
+  material_design_icons_flutter: ^7.0.0
+  cupertino_icons: ^1.0.8
+
+  # table_calendar 패키지
+  table_calendar: ^3.0.9
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # 🚨 수정: flutter_lints의 일반적인 최신 버전을 반영했습니다. (6.0.0은 일반적이지 않음) 🚨
+  flutter_lints: ^4.0.0
+
+  flutter_launcher_icons: ^0.14.4
+  flutter_native_splash: ^2.4.0
+
+# The following section is specific to Flutter packages.
+flutter:
+  uses-material-design: true
+
+  # Asset 폴더를 등록합니다.
+  assets:
+    - assets/
+
+# 앱 아이콘 설정 (짙은 녹색 배경 제거)
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/app_icon.png"
+
+# 스플래시 스크린 설정 (색상 통일)
+flutter_native_splash:
+  color: "#268080"
+  image: "assets/splash_icon.png"
+
+  # Android 12 이상을 위한 설정
+  android_12:
+    color: "#268080"
+    image: "assets/app_icon.png"
