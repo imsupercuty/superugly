@@ -5,7 +5,7 @@ import 'package:google_generative_ai/google_generative_ai.dart' as gemini;
 import 'scent_models.dart';
 
 // ⚠️ 실제 사용 시, 이 부분을 환경 변수 등으로 안전하게 관리해야 합니다.
-const String apiKey = 'AIzaSyCOOw2TU7mBnHmKGwAqdXWJqw923iD4HjM'; // ⬅️ 여기에 실제 API 키를 넣어주세요!
+const String apiKey = 'AIzaSyAqy8tirp1ucbC89dOL4aF_g9nduCmI3BQ'; // ⬅️ 여기에 실제 API 키를 넣어주세요!
 
 // ⬇️ GeminiService 클래스를 정의합니다.
 class GeminiService {
